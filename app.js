@@ -1,4 +1,4 @@
-angular.module("MealPlannerApp", [])
+angular.module("MealPlannerApp", ['ngTouch'])
 	.controller('CalendarCtrl', function(){
 		var calendar = this;
 		calendar.cal = {
