@@ -1,0 +1,23 @@
+[
+	{
+		"title": "Spaghetti",
+		"breakfast": false,
+		"lunch": true,
+		"dinner": true,
+		"photo": "/photos/spaghetti.jpg"
+	},
+	{
+		"title": "Curry",
+		"breakfast": false,
+		"lunch": true,
+		"dinner": true,
+		"photo": "/photos/curry.jpg"
+	},
+	{
+		"title": "German Pancakes",
+		"breakfast": true,
+		"lunch": false,
+		"dinner": false,
+		"photo": "/photos/german_pancakes.jpg"
+	}
+]

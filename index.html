@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Free Family Meal Planner</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-app="MealPlannerApp">
+
+	
+
+	<div class="container" ng-controller="CalendarCtrl">
+
+		<!-- Simple Random List -->
+		<div ng-controller="SimpleRandomCtrl as simpleRand">
+			<div class="clearfix">
+				<button class="btn btn-primary pull-right" ng-click="simpleRand.generateList()">Generate List</button>
+				<button class="btn btn-warning" ng-show="simpleRand.canUndo()" ng-click="simpleRand.undo()">Undo</button>
+			</div>
+			<ul class="list-group">
+				<li class="list-group-item text-overflow" ng-repeat="idea in simpleRand.dinnerIdeaList track by $index">{{idea}}
+					<button ng-click="simpleRand.remove($index)" type="button" class="close"><span>&times;</span></button>
+				</li>
+			</ul>
+		</div>
+
+
+		<!-- <table class="table">
+			<tr>
+				<th>Day</th>
+				<th>Breakfast</th>
+				<th>Lunch</th>
+				<th>Dinner</th>
+			</tr>
+			<tr>
+				<td>Sunday</td>
+				<td>{{calendar.cal.sunday.breakfast}}</td>
+				<td>{{calendar.cal.sunday.lunch}}</td>
+				<td>{{calendar.cal.sunday.dinner}}</td>
+			</tr>
+			<tr>
+				<td>Monday</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Tuesday</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Wednesday</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Thursday</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Friday</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Saturday</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th>Mealtime</th>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>
+			</tr>
+			<tr>
+				<td>Breakfast</td>
+				<td>Cream Of Wheat</td>
+				<td>German Pancakes</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Lunch</td>
+				<td></td>
+				<td>Cream Of Wheat</td>
+				<td>German Pancakes</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Dinner</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Cream Of Wheat</td>
+				<td>German Pancakes</td>
+			</tr>
+		</table> -->
+	</div>
+	
+</body>
+</html>
