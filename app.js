@@ -84,6 +84,7 @@ angular.module("MealPlannerApp", [])
 			lastItem = backupList.pop();
 			simpleRandom.dinnerIdeaList.splice(lastItem.index, 0, lastItem.value);
 		}
+		this.generateList();
 	});
 
 function shuffle(array) {

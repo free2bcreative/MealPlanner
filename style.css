@@ -1,6 +1,22 @@
-
+.navbar-header h3 {
+	color: #59AEB7;
+}
+body {
+	background-color: #59AEB7;
+}
 .text-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.btn-undo {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 10;
+}
+
+.simplelist {
+	margin-bottom: 60px;
 }
